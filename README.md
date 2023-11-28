@@ -1,30 +1,36 @@
-# React + TypeScript + Vite
+# Profile Widget
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Widget for profile onboarding.
 
-Currently, two official plugins are available:
+## Instructions
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Getting Started
 
-## Expanding the ESLint configuration
+    git clone https://github.com/deolaj/profile-widget.git
+    cd profile-widget
+    npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Development
 
-- Configure the top-level `parserOptions` property like this:
+To run the local server,
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+    npm run dev
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+`prettier`, `typescript`, and `eslint` libraries are used for formating and error checking. Install their corresponding vscode extensions to use with VSCode.
+
+### Production
+
+To generate build files for production,
+
+    npm run build
+
+## Additional Comments
+
+- Chakra UI was used for styling for speed, but I had to make custom changes to fit the given UI.
+- React query was used to manage server state which wasn't changing in this case
+- Types were created to fit the mock data.
+
+## Improvised additions
+
+- Added hover state to both Group name and Task to improve the visual experience
+- Added some animation to improve the experience too
