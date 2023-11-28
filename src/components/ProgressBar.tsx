@@ -21,6 +21,7 @@ export default function ProgressBar({
             h="20px"
             borderRadius="16"
             colorScheme="primary.success"
+            title="Progress bar showing percentage of tasks completed"
             bgColor="primary.success.300"
             sx={{
                 "& > div:first-of-type": {
