@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, memo, useRef, useState } from "react";
+import { Fragment, Dispatch, SetStateAction, memo, useRef, useState } from "react";
 import { Box, Button, Flex, Image, Text, VStack, chakra } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -50,6 +50,7 @@ function TaskGroup({
             );
     });
 
+    // Check whether all tasks for this group are complete or not
     function isComplete() {
         const groupTasks = group.tasks;
         for (let i = 0; i < groupTasks.length; i += 1) {
@@ -123,6 +124,7 @@ function TaskGroup({
                 </Button>
             </Flex>
 
+            {/* Tasks List */}
             <AnimatePresence>
                 {showTasks && (
                     <motion.section
@@ -141,13 +143,13 @@ function TaskGroup({
                     >
                         <VStack alignItems="flex-start" gap="2" p={{ base: "3", md: "4" }}>
                             {group.tasks.map((task, index) => (
-                                <React.Fragment key={task.description}>
+                                <Fragment key={task.description}>
                                     <Task
                                         checked={task.checked}
                                         description={task.description}
                                         setTask={setTask.current(index)}
                                     />
-                                </React.Fragment>
+                                </Fragment>
                             ))}
                         </VStack>
                     </motion.section>
