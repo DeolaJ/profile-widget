@@ -43,5 +43,6 @@ To generate build files for production,
 ## Improvised additions
 
 - Added hover state to both Group names and Tasks to improve the visual experience
-- Added some animation to improve the experience too
+- Added some animation to improve the experience of the Progress bar and Task accordion.
+- Made minor changes to make it suitable for mobile screens (responsive).
 - All tests are in the `src/tests` folder, only for easy navigation of the components directory
