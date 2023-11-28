@@ -22,6 +22,11 @@ export default function ProgressBar({
             borderRadius="16"
             colorScheme="primary.success"
             bgColor="primary.success.300"
+            sx={{
+                "& > div:first-child": {
+                    transitionProperty: "width",
+                },
+            }}
         >
             <ProgressLabel
                 width={`${progressPercent > 6 ? progressPercent : 6}%`} // Leave enough room for the label to be rendered horizonatally
@@ -32,6 +37,8 @@ export default function ProgressBar({
                 fontSize="md"
                 fontWeight={600}
                 color="primary.success.300"
+                transitionProperty="width"
+                transition="ease-out 0.3s"
             >
                 {progressPercent}%
             </ProgressLabel>
