@@ -23,7 +23,7 @@ export default function ProgressBar({
             colorScheme="primary.success"
             bgColor="primary.success.300"
             sx={{
-                "& > div:first-child": {
+                "& > div:first-of-type": {
                     transitionProperty: "width",
                 },
             }}
