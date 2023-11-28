@@ -5,6 +5,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { AnimatePresence } from "framer-motion";
 
 import WidgetProvider from "./components/WidgetProvider";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 import { theme } from "../styles/theme";
 
@@ -24,7 +25,9 @@ function App() {
         <QueryClientProvider client={queryClient}>
             <ChakraProvider theme={theme}>
                 <AnimatePresence mode="wait">
-                    <WidgetProvider />
+                    <ErrorBoundary>
+                        <WidgetProvider />
+                    </ErrorBoundary>
                 </AnimatePresence>
             </ChakraProvider>
             <ReactQueryDevtools initialIsOpen={false} />
