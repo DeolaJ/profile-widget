@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import { useState } from "react";
 
 import Header from "./Header";
-import TaskList from "./TaskList";
+import TaskGroupList from "./TaskGroupList";
 import ProgressBar from "./ProgressBar";
 
 import { TaskGroupType } from "../types";
@@ -24,7 +24,7 @@ export default function Widget({ taskGroups }: { taskGroups: TaskGroupType[] }) 
             <Header>
                 <ProgressBar taskGroups={taskGroups} localTaskGroups={localTaskGroups} />
             </Header>
-            <TaskList taskGroups={localTaskGroups} updateTaskGroups={updateLocalTaskGroups} />
+            <TaskGroupList taskGroups={localTaskGroups} updateTaskGroups={updateLocalTaskGroups} />
         </Box>
     );
 }

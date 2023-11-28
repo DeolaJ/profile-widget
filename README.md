@@ -1,6 +1,8 @@
 # Profile Widget
 
-Widget for profile onboarding.
+This is a simple widget for profile onboarding.
+
+The project was built with `Vite` and `React`
 
 ## Instructions
 
@@ -16,7 +18,15 @@ To run the local server,
 
     npm run dev
 
-`prettier`, `typescript`, and `eslint` libraries are used for formating and error checking. Install their corresponding vscode extensions to use with VSCode.
+`Prettier`, `Typescript`, and `Eslint` libraries are used for formating and error checking. Install their corresponding vscode extensions to use with VSCode.
+
+### Test
+
+Some unit and integration tests were written using `Jest` and `React testing library`. These tests were not as extensive because of the timeframe, but are sufficient to test the basic functionality.
+
+To run these tests
+
+    npm run test
 
 ### Production
 
@@ -26,11 +36,13 @@ To generate build files for production,
 
 ## Additional Comments
 
-- Chakra UI was used for styling for speed, but I had to make custom changes to fit the given UI.
+- Chakra UI was used to style for speed, but I had to make custom changes to fit the given UI
 - React query was used to manage server state which wasn't changing in this case
-- Types were created to fit the mock data.
+- Types were created to fit the mock data
 
 ## Improvised additions
 
-- Added hover state to both Group name and Task to improve the visual experience
-- Added some animation to improve the experience too
+- Added hover state to both Group names and Tasks to improve the visual experience
+- Added some animation to improve the experience of the Progress bar and Task accordion.
+- Made minor changes to make it suitable for mobile screens (responsive).
+- All tests are in the `src/tests` folder, only for easy navigation of the components directory
